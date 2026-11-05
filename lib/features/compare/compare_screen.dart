@@ -320,13 +320,15 @@ class CaptureViewer extends ConsumerWidget {
                 children: [
                   SwatchChip(color: Color(capture.fabricArgb), hex: hexOf(capture.fabricArgb)),
                   const Spacer(),
-                  IconButton.filledTonal(
+                  IconButton.filled(
+                    style: IconButton.styleFrom(backgroundColor: Colors.white24, foregroundColor: Colors.white),
                     tooltip: l10n.saveToPhotos,
                     onPressed: () => ref.read(exportServiceProvider).saveToPhotos(context, capture),
                     icon: const Icon(Icons.download_outlined),
                   ),
                   const SizedBox(width: Space.s1),
                   IconButton.filled(
+                    style: IconButton.styleFrom(backgroundColor: Colors.white, foregroundColor: SnipColors.ink),
                     tooltip: l10n.share,
                     onPressed: () => ShareSheet.show(context, windowId: capture.windowId, captures: [capture], focus: capture),
                     icon: const Icon(Icons.ios_share),

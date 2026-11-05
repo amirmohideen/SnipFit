@@ -56,7 +56,7 @@ Future<({LocalStore store, RecordingAnalytics analytics})> pumpScreen(
 }
 
 /// Like [pumpScreen] but inside a GoRouter, with stub pages for the routes
-/// the screen navigates to (each shows "route:<location>").
+/// the screen navigates to (each shows `route:<location>`).
 Future<({LocalStore store, RecordingAnalytics analytics})> pumpRouted(
   WidgetTester tester,
   Widget screen, {

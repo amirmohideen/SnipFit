@@ -410,15 +410,13 @@ class _LiveWindowScreenState extends ConsumerState<LiveWindowScreen> with Widget
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FilledButton.tonal(
+                // Neutral camera chrome: no accent color around the live window.
+                _ScrimButton(
+                  label: l10n.useDemoFabric,
                   onPressed: () => _setDemo(true).then((_) => setState(() => _practiceStep = 1)),
-                  child: Text(l10n.useDemoFabric),
                 ),
                 const SizedBox(width: Space.s1),
-                FilledButton.tonal(
-                  onPressed: () => setState(() => _practiceStep = 1),
-                  child: Text(l10n.next),
-                ),
+                _ScrimButton(label: l10n.next, onPressed: () => setState(() => _practiceStep = 1)),
               ],
             ),
           ],
@@ -474,4 +472,24 @@ class _LiveWindowScreenState extends ConsumerState<LiveWindowScreen> with Widget
 
 extension on int {
   String get hex => hexOf(this);
+}
+
+class _ScrimButton extends StatelessWidget {
+  const _ScrimButton({required this.label, required this.onPressed});
+
+  final String label;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => TextButton(
+    onPressed: onPressed,
+    style: TextButton.styleFrom(
+      backgroundColor: SnipColors.cameraScrim,
+      foregroundColor: SnipColors.cameraOnScrim,
+      minimumSize: const Size(Sizes.minTap, Sizes.minTap),
+      padding: const EdgeInsets.symmetric(horizontal: Space.s2),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Radii.button)),
+    ),
+    child: Text(label),
+  );
 }

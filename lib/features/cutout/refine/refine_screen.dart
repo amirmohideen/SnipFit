@@ -209,7 +209,8 @@ class _ToolRow extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   label,
-                  maxLines: 1,
+                  maxLines: 2,
+                  textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: selected ? Theme.of(context).colorScheme.surface : null,

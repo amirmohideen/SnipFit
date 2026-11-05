@@ -87,7 +87,11 @@ class HomeScreen extends ConsumerWidget {
                           ),
                         ),
                         const SizedBox(width: Space.s1),
-                        FilledButton.tonal(onPressed: () => context.push('/ai'), child: Text(l10n.tryIt)),
+                        OutlinedButton(
+                          onPressed: () => context.push('/ai'),
+                          style: OutlinedButton.styleFrom(minimumSize: const Size(Sizes.minTap, Sizes.minTap)),
+                          child: Text(l10n.tryIt),
+                        ),
                       ],
                     ),
                   ),
