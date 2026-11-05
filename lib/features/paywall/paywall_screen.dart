@@ -222,11 +222,13 @@ class _Hero extends StatelessWidget {
     Widget panel(String label, Color? fabric) => Expanded(
       child: Column(
         children: [
-          AspectRatio(
-            aspectRatio: 3 / 4,
+          Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(Radii.card),
-              child: CustomPaint(painter: FigurePainter(kind: kind, fabric: fabric, cutProgress: 0)),
+              child: CustomPaint(
+                size: Size.infinite,
+                painter: FigurePainter(kind: kind, fabric: fabric, cutProgress: 0),
+              ),
             ),
           ),
           const SizedBox(height: Space.xs),
@@ -424,6 +426,8 @@ class _PlanTile extends StatelessWidget {
               width: selected ? 2 : 1,
             ),
           ),
+          // Stacked rather than one long row, so large system text sizes and
+          // long localized prices never overflow.
           child: Row(
             children: [
               Icon(selected ? Icons.radio_button_checked : Icons.radio_button_off),
@@ -432,20 +436,21 @@ class _PlanTile extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
+                    Wrap(
+                      spacing: Space.s1,
+                      runSpacing: Space.xs,
+                      crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
-                        Flexible(child: Text(title, style: theme.textTheme.titleMedium)),
-                        if (badge != null) ...[
-                          const SizedBox(width: Space.s1),
-                          PillBadge(label: badge!, emphasized: true),
-                        ],
+                        Text(title, style: theme.textTheme.titleMedium),
+                        if (badge != null) PillBadge(label: badge!, emphasized: true),
                       ],
                     ),
+                    const SizedBox(height: 2),
+                    Text(price, style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600)),
                     if (detail != null) Text(detail!, style: theme.textTheme.bodySmall),
                   ],
                 ),
               ),
-              Text(price, style: theme.textTheme.titleMedium),
             ],
           ),
         ),
