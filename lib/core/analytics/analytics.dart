@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:posthog_flutter/posthog_flutter.dart';
 
+import '../crash/crash_reporter.dart';
 import '../storage/local_store.dart';
 import 'analytics_events.dart';
 
@@ -136,9 +137,10 @@ class AnalyticsConsentController extends Notifier<AnalyticsConsent> {
     await ref
         .read(localStoreProvider)
         .setString(Keys.analyticsConsent, consent.name);
-    await ref
-        .read(analyticsProvider)
-        .setEnabled(analyticsAllowed(consent, optInRegion: optInRegion));
+    final allowed = analyticsAllowed(consent, optInRegion: optInRegion);
+    await ref.read(analyticsProvider).setEnabled(allowed);
+    // Crash reports follow the same choice (conservative for the EU/UK).
+    await ref.read(crashReporterProvider).setEnabled(allowed);
   }
 }
 

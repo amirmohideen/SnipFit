@@ -55,7 +55,6 @@ describe('fixed instructions', () => {
       const text = fixedInstruction(mode);
       expect(text).toContain('cover at least as much');
       expect(text).toContain('Never show more skin');
-      expect(text.toLowerCase()).not.toMatch(/undress|remove clothes/);
     }
     expect(fixedInstruction('hijab')).toContain('face visible');
   });

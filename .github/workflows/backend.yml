@@ -1,0 +1,36 @@
+# Deploys Firestore/Storage rules, indexes, Cloud Functions and the website.
+# Secrets: GCP_SA_KEY_DEV / GCP_SA_KEY_PROD (service account JSON with
+# Firebase Admin + Cloud Functions Admin + Service Account User roles).
+name: Deploy backend
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Firebase project alias from .firebaserc
+        required: true
+        default: dev
+        type: choice
+        options: [dev, prod]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --prefix functions
+      - run: npm test --prefix functions
+      - run: python -m venv functions-python/venv && functions-python/venv/bin/pip install -r functions-python/requirements.txt
+      - name: Deploy
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ inputs.project == 'prod' && secrets.GCP_SA_KEY_PROD || secrets.GCP_SA_KEY_DEV }}
+        run: |
+          echo "$GOOGLE_APPLICATION_CREDENTIALS_JSON" > $RUNNER_TEMP/sa.json
+          export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/sa.json
+          npx firebase-tools@15 deploy --project ${{ inputs.project }} --only firestore,storage,functions,hosting --non-interactive
