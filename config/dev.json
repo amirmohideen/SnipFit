@@ -1,0 +1,20 @@
+{
+  "SNIPFIT_WEB_DOMAIN": "snipfit.app",
+  "SNIPFIT_SUPPORT_EMAIL": "support@snipfit.app",
+  "REVENUECAT_APPLE_KEY": "",
+  "REVENUECAT_GOOGLE_KEY": "",
+  "POSTHOG_TOKEN": "",
+  "POSTHOG_HOST": "https://eu.i.posthog.com",
+  "FACEBOOK_APP_ID": "",
+  "TIKTOK_CLIENT_KEY": "",
+  "SNAP_CLIENT_ID": "",
+  "APP_STORE_ID": "",
+  "ANDROID_PACKAGE": "com.snipfit.app.dev",
+  "GOOGLE_SERVER_CLIENT_ID": "",
+  "APP_STORE_PPID_WOMEN": "",
+  "APP_STORE_PPID_HIJAB": "",
+  "APP_STORE_PPID_MEN": "",
+  "PLAY_LISTING_WOMEN": "",
+  "PLAY_LISTING_HIJAB": "",
+  "PLAY_LISTING_MEN": ""
+}

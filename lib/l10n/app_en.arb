@@ -1,0 +1,458 @@
+{
+  "@@locale": "en",
+  "account": "Account",
+  "accountDeleted": "Your account and data were deleted.",
+  "accountsUnavailable": "Accounts aren't set up yet",
+  "accountsUnavailableBody": "Everything free works without an account.",
+  "ageBlockedBody": "Snipfit isn't available for you yet. Thanks for understanding.",
+  "ageBlockedTitle": "Sorry!",
+  "ageSubtitle": "We ask everyone. It helps us keep Snipfit safe.",
+  "ageTitle": "What year were you born?",
+  "aiAdultsOnlyBody": "AI try-on is only available to people 18 and over.",
+  "aiAdultsOnlyTitle": "AI try-on is for adults",
+  "aiApproximation": "AI previews are approximations. Colors may differ; your cutout shows the true color.",
+  "aiBlockedBody": "We couldn't create this preview. Your credit was returned.",
+  "aiBlockedTitle": "Preview not available",
+  "aiBusy": "AI try-on is very busy right now. Please try again later.",
+  "aiCardBody": "Tap a garment in the store and see the full look on you.",
+  "aiCardTitle": "AI try-on",
+  "aiConsentCheckbox": "I agree, and I confirm this photo is of me or someone who gave permission.",
+  "aiConsentSetting": "AI try-on processing",
+  "aiConsentSettingBody": "Lets Snipfit send photos to its server and Google's AI for paid try-ons. Turning this off turns AI features off.",
+  "aiConsentTitle": "Before your AI try-on",
+  "aiConsentWhat": "To create this preview, your photo and the garment photo are sent to our server and to Google's AI service (Google Cloud Vertex AI). They are deleted within 24 hours.",
+  "aiConsentWho": "We use them only to make your preview and to check it is safe. We never use them to identify you, and we never sell them.",
+  "aiConsentWhy": "Nothing is sent until you tap Use it on a garment.",
+  "aiConsentWithdrawn": "AI try-on is now off.",
+  "aiDisclosure": "AI Disclosure",
+  "aiFailedBody": "Something went wrong on our side. Your credit was returned. Please try again.",
+  "aiFailedTitle": "That didn't work",
+  "aiGeneratedLabel": "AI-generated",
+  "aiLook": "AI look",
+  "aiNeedsCreditsBody": "Pro includes 30 AI try-ons a month, or you can buy a credit pack.",
+  "aiNeedsCreditsTitle": "You're out of AI try-ons",
+  "aiPhaseChecking": "Checking your photos…",
+  "aiPhaseFinishing": "Finishing up…",
+  "aiPhaseGenerating": "Creating your AI look…",
+  "aiPhaseQueued": "In the queue…",
+  "aiRateLimited": "You've made a lot of try-ons. Take a short break and try again.",
+  "aiReadyBody": "Point your camera at a garment and tap it. You'll see an AI image of you wearing it.",
+  "aiReadyTitle": "See the full look",
+  "aiResultTitle": "Your AI look",
+  "aiSuspendedBody": "AI try-on is paused on this account. Contact support if you think this is a mistake.",
+  "aiSuspendedTitle": "AI try-on is paused",
+  "aiTakesAMinute": "This can take a minute or more.",
+  "aiUnavailableBody": "AI try-on isn't available on this device or right now. Everything free still works.",
+  "aiUnavailableTitle": "AI try-on isn't available",
+  "allow": "Allow",
+  "analyticsBody": "Share anonymous usage stats, like which screens are used, to help us improve. Never your photos. You can change this in Settings.",
+  "analyticsTitle": "Help improve Snipfit?",
+  "anonymousAccount": "Not signed in",
+  "appearance": "Appearance",
+  "back": "Back",
+  "before": "Before",
+  "benefitAiTryOns": "30 AI try-ons every month",
+  "benefitBestColors": "Your best colors result",
+  "benefitLiveAr": "Live AR try-on",
+  "benefitNoWatermark": "No watermark on your shares",
+  "bestValue": "Best value",
+  "biometricBody1": "To find your garment, Snipfit detects your face and body outline in the photo.",
+  "biometricBody2": "This happens only on your phone, only in memory, and is never stored or sent.",
+  "biometricBody3": "We never use it to identify you, and we never sell or share it.",
+  "biometricCheckbox": "I agree to face and body processing on my phone, as described in the Biometric Notice.",
+  "biometricNotice": "Biometric Notice",
+  "biometricTitle": "Before we look at your photo",
+  "birthYearSelected": "Birth year {year}",
+  "@birthYearSelected": {
+    "placeholders": {
+      "year": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "brush": "Brush",
+  "buyCredits": "Buy 20 AI credits · {price}",
+  "@buyCredits": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraDeniedBody": "Snipfit needs the camera to take your photo and show fabric through your window. You can turn it on in Settings, or upload a photo instead.",
+  "cameraDeniedTitle": "Camera is off",
+  "cameraIntroBody": "Your photo is cut out right here on your phone. It isn't uploaded.",
+  "cameraIntroTitle": "Your photos stay on your phone",
+  "cancel": "Cancel",
+  "captionCopied": "Caption and link copied. Paste them into your post.",
+  "captureSaved": "Saved · {hex}",
+  "@captureSaved": {
+    "placeholders": {
+      "hex": {
+        "type": "String"
+      }
+    }
+  },
+  "captureTileLabel": "Capture {number}, fabric color {hex}",
+  "@captureTileLabel": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "hex": {
+        "type": "String"
+      }
+    }
+  },
+  "change": "Change",
+  "chooseGarmentFromGallery": "Choose from gallery",
+  "close": "Close",
+  "coachFaceGuide": "Line up your face and shoulders with the outline",
+  "compare": "Compare",
+  "compareEmpty": "Snap a few fabrics to compare them here.",
+  "compareTitle": "Compare",
+  "contactSupport": "Contact support",
+  "continueLabel": "Continue",
+  "creditBalance": "{count, plural, =0{No AI try-ons left} =1{1 AI try-on left} other{{count} AI try-ons left}}",
+  "@creditBalance": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "creditsBadge": "{count} AI",
+  "@creditsBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "creditsBody": "One-time purchase. Use them anytime, with or without Pro.",
+  "creditsOnTheirWay": "Thanks! Your credits will appear in a moment.",
+  "creditsTitle": "Need more AI try-ons?",
+  "delete": "Delete",
+  "deleteAccount": "Delete account",
+  "deleteAccountBody": "Deletes your account, credits and any data on our servers.",
+  "deleteAccountConfirm": "This permanently deletes your account, remaining credits, consent records and any AI results on our servers, and the photos on this phone. Subscriptions must be cancelled in your store account.",
+  "deleteAccountFailed": "We couldn't delete your account right now. Try again, or request deletion at {url}",
+  "@deleteAccountFailed": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteLocalData": "Delete photos on this phone",
+  "deleteLocalDataBody": "Removes all windows, captures and AI results stored on this phone.",
+  "deleteLocalDataConfirm": "Delete all windows, captures and AI results on this phone? This can't be undone.",
+  "deleted": "Deleted",
+  "demoFabricNext": "Next demo fabric",
+  "done": "Done",
+  "dragHandlesHint": "Drag the dots to reshape the scarf.",
+  "durationDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@durationDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMonths": "{count, plural, =1{1 month} other{{count} months}}",
+  "@durationMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationYears": "{count, plural, =1{1 year} other{{count} years}}",
+  "@durationYears": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "edgeSoftness": "Softness",
+  "edgeSoftnessValue": "Edge softness {value}",
+  "@edgeSoftnessValue": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "editWindow": "Edit window",
+  "emptyWindowsTitle": "No windows yet",
+  "eraser": "Eraser",
+  "exposureLock": "Lock exposure and focus",
+  "exposureLocked": "Exposure and focus locked",
+  "exposureUnlocked": "Exposure and focus unlocked",
+  "faceConsentSetting": "Face processing on this phone",
+  "faceConsentSettingBody": "Needed to make new windows. Withdrawing stops new face processing.",
+  "favorite": "Mark as favorite",
+  "fixGeneric": "Something went wrong. Try another photo.",
+  "fixMultipleFaces": "Only one person in the photo, please.",
+  "fixNoFace": "We can't see a face. Face the camera in good light.",
+  "fixNotFrontal": "Face the camera straight on.",
+  "fixTooBright": "Too bright. Step out of direct light.",
+  "fixTooDark": "Move to brighter light.",
+  "fixTooFar": "Move a little closer.",
+  "flip": "Flip",
+  "flipCamera": "Switch camera",
+  "formatCompare": "Compare",
+  "formatReveal": "Video",
+  "formatSingle": "Photo",
+  "freeForever": "Free forever: the cutout, live window, compare, save and share.",
+  "freePlan": "Free plan",
+  "freshSelfieTip": "Tip: take a fresh selfie here for a fairer light match.",
+  "garmentNotFound": "Couldn't find an item there. Tap right on the garment.",
+  "genericError": "Something went wrong. Please try again.",
+  "getPro": "Get Pro",
+  "getStarted": "Get started",
+  "help": "Help",
+  "hookAnimationLabel": "A printed photo with the scarf cut out, held over fabric, then the same trick on a phone",
+  "hookHeadline": "See any fabric on you before you buy.",
+  "howItWorks": "How it works",
+  "howToCancel": "Cancel anytime in your App Store or Google Play subscription settings, at least 24 hours before it renews.",
+  "isThisTheItem": "Is this the item?",
+  "keepBrowsing": "Keep browsing",
+  "language": "Language",
+  "languageSystem": "Phone language",
+  "legal": "Legal",
+  "licenses": "Open-source licenses",
+  "liveWindowCanvasLabel": "Your photo over the camera. Drag to move, pinch to resize and rotate, tap to focus.",
+  "lock": "Lock",
+  "lockPhoto": "Lock photo in place",
+  "locked": "Locked",
+  "madeWithSnipfit": "Made with Snipfit",
+  "makeFirstWindow": "Make your first window",
+  "manageSubscription": "Manage subscription",
+  "modeHijab": "Hijab",
+  "modeHijabSubtitle": "Try scarf colors around your face.",
+  "modeMen": "Men",
+  "modeMenSubtitle": "Shirts and tops.",
+  "modeTitle": "What are you shopping for?",
+  "modeWomen": "Women",
+  "modeWomenSubtitle": "Tops and dresses.",
+  "monthlyEquivalent": "{price} per month, billed yearly",
+  "@monthlyEquivalent": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "moreOptions": "More options",
+  "newWindow": "New window",
+  "next": "Next",
+  "notNow": "Not now",
+  "notSignedIn": "Not signed in",
+  "notifyAllow": "Turn on notifications",
+  "notifyBody": "Get a reminder when your AI try-on is ready, so you can keep shopping while it works.",
+  "notifyOff": "Notifications are off. You can turn them on in Settings.",
+  "notifyOn": "We'll let you know when it's ready.",
+  "notifyTitle": "Get a heads-up?",
+  "notifyWhenReady": "Notify me when it's ready",
+  "openOnWeb": "Open on the web",
+  "openSettings": "Open Settings",
+  "paywallHeroLabel": "Before and after: a garment shown on you with AI",
+  "paywallTitle": "See the full look with Snipfit Pro",
+  "periodMonth": "month",
+  "periodYear": "year",
+  "photosAccessDenied": "Snipfit can't save to Photos. Allow it in Settings.",
+  "planMonthly": "Snipfit Pro Monthly",
+  "planYearly": "Snipfit Pro Yearly",
+  "practiceDrag": "Drag your photo onto it",
+  "practicePoint": "Point at any fabric",
+  "practiceSnap": "Snap to compare",
+  "pricePerMonth": "{price}/month",
+  "@pricePerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "pricePerYear": "{price}/year",
+  "@pricePerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "privacy": "Privacy",
+  "privacyPolicy": "Privacy Policy",
+  "proActive": "Snipfit Pro",
+  "proBadge": "Pro",
+  "purchaseFailed": "The purchase didn't go through. You weren't charged.",
+  "purchasePending": "Your purchase is pending. We'll unlock it once it's approved.",
+  "purchasesUnavailable": "Purchases aren't available right now. Everything free still works.",
+  "readBiometricNotice": "Read the Biometric Notice",
+  "recentWindows": "Your windows",
+  "redo": "Redo",
+  "referenceBody": "One clear photo of you, upper body or full body. We keep it on your phone and send it only when you start a try-on.",
+  "referenceStorageNote": "Stored only on this phone. You can change or delete it anytime.",
+  "referenceTip1": "Fully clothed, plain fitted clothes",
+  "referenceTip2": "Just you in the photo",
+  "referenceTip3": "Good, even light",
+  "referenceTitle": "Your try-on photo",
+  "refineCanvasLabel": "Your photo with the window highlighted. One finger paints, two fingers zoom.",
+  "refineTitle": "Refine",
+  "renderingVideo": "Making your video",
+  "report": "Report",
+  "reportInappropriate": "It's inappropriate",
+  "reportNotPermitted": "It shows someone without their permission",
+  "reportOther": "Something else",
+  "reportPoorQuality": "It's wrong or poor quality",
+  "reportThanks": "Thanks. Our team will review it.",
+  "reportTitle": "What's wrong with this image?",
+  "resetToAuto": "Reset to auto",
+  "restoreNothing": "No previous purchases found.",
+  "restorePurchases": "Restore purchases",
+  "restoreSuccess": "Purchases restored.",
+  "retake": "Retake",
+  "saveToPhotos": "Save to Photos",
+  "savedToPhotos": "Saved to Photos",
+  "seePro": "See Snipfit Pro",
+  "selectBirthYear": "Select year",
+  "settings": "Settings",
+  "share": "Share",
+  "shareCaption": "Which color should I get?",
+  "signInApple": "Sign in with Apple",
+  "signInCancelled": "Sign-in cancelled.",
+  "signInFailed": "Sign-in didn't work. Please try again.",
+  "signInGoogle": "Sign in with Google",
+  "signInLinked": "Signed in. Your credits are saved to your account.",
+  "signInSwitched": "Signed in to your existing account.",
+  "signInWhy": "Sign in to keep your credits on all your devices. Optional.",
+  "signOut": "Sign out",
+  "signedInApple": "Signed in with Apple",
+  "signedInGoogle": "Signed in with Google",
+  "skip": "Skip",
+  "snapToCompare": "Snap to compare",
+  "snipping": "Snipping your window…",
+  "someoneElseBody": "Only use photos of adults who said yes. Never use photos of anyone under 18.",
+  "someoneElseCheckbox": "This person is 18 or older and gave me permission to use their photo.",
+  "someoneElseShareReminder": "This window shows someone else. Share it only with their permission.",
+  "someoneElseTitle": "Trying on someone else?",
+  "squareFormat": "Square (1:1)",
+  "startFreeTrial": "Start your {duration} free trial",
+  "@startFreeTrial": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "storeLoadFailed": "Couldn't load prices from the store. Check your connection.",
+  "styleClassicWrap": "Classic wrap",
+  "styleKhimar": "Khimar",
+  "styleShayla": "Shayla",
+  "subjectMe": "Me",
+  "subjectSomeoneElse": "Someone else",
+  "subscribeFor": "Subscribe for {price}",
+  "@subscribeFor": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "subscription": "Subscription",
+  "subscriptionDisclosure": "{plan}: 1 {period}, {price} per {period}. Renews automatically every {period} until you cancel.",
+  "@subscriptionDisclosure": {
+    "placeholders": {
+      "plan": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "takePhoto": "Take photo",
+  "tapAGarment": "Tap a garment",
+  "tapGarmentHint": "Tap the item on the rack, hanger or mannequin",
+  "targetInstagram": "Stories",
+  "targetMore": "More",
+  "targetSnapchat": "Snapchat",
+  "targetTiktok": "TikTok",
+  "targetWhatsapp": "WhatsApp",
+  "termsBullet1": "Your photos stay on your phone. Nothing is uploaded unless you start a paid AI try-on and agree first.",
+  "termsBullet2": "Snipfit only places fabric over clothing. It never shows skin.",
+  "termsBullet3": "Use photos of yourself, or of adults who gave permission. Never of anyone under 18.",
+  "termsCheckbox": "I agree to the Terms of Use and Privacy Policy.",
+  "termsOfUse": "Terms of Use",
+  "termsTitle": "Before we start",
+  "themeDark": "Dark",
+  "themeLight": "Light",
+  "themeSystem": "System",
+  "tipHijabPhoto": "Tip: a plain hijab with loose ends tied back cuts out best",
+  "tipTopPhoto": "Tip: a plain, fitted top cuts out best",
+  "torch": "Torch",
+  "torchUnavailable": "This camera has no torch.",
+  "trialDisclosure": "Free for {duration}, then {plan} at {price} per {period}. The trial turns into a paid subscription automatically unless you cancel at least 24 hours before it ends, and renews every {period} until you cancel.",
+  "@trialDisclosure": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      },
+      "plan": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "trueColor": "True color",
+  "tryHijabStyle": "Try a hijab style",
+  "tryIt": "Try it",
+  "trySomeoneElse": "Try on someone else",
+  "undo": "Undo",
+  "unfavorite": "Remove favorite",
+  "unlockPhoto": "Unlock photo",
+  "upload": "Upload",
+  "uploadInstead": "Upload a photo instead",
+  "uploadPhoto": "Upload a photo",
+  "usageAnalytics": "Usage analytics",
+  "usageAnalyticsBody": "Anonymous stats that help us improve. Never photos.",
+  "useAnyway": "Use anyway",
+  "useCamera": "Use camera",
+  "useDemoFabric": "Use demo fabric",
+  "useIt": "Use it",
+  "versionLabel": "Version {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "videoUnavailable": "Video isn't available on this phone, so we shared a photo.",
+  "wearingHijab": "Wearing a hijab",
+  "welcomeToPro": "Welcome to Snipfit Pro!",
+  "whichOne": "Which one?",
+  "windowReady": "Your window is ready",
+  "windowTileLabel": "Window from {date}",
+  "@windowTileLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePro": "You're on Snipfit Pro.",
+  "yourTryOnPhoto": "Your try-on photo"
+}

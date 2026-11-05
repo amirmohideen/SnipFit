@@ -1,0 +1,103 @@
+name: snipfit
+description: "Snipfit: see any fabric on you before you buy."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+  flutter: ">=3.47.5"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State, routing, i18n
+  flutter_riverpod: ^3.4.3
+  go_router: ^18.1.3
+  intl: any
+
+  # Camera, photos, on-device ML
+  camera: ^0.12.2
+  image_picker: ^1.2.4
+  face_detection_tflite: ^6.10.1
+  image: ^4.12.0
+  gal: ^2.3.3
+
+  # Firebase (accounts, ledger, AI functions, ops switches, crash reporting)
+  firebase_core: ^5.1.0
+  firebase_auth: ^7.0.1
+  cloud_firestore: ^7.1.0
+  cloud_functions: ^7.0.1
+  firebase_storage: ^14.0.1
+  firebase_app_check: ^0.5.1
+  firebase_crashlytics: ^6.0.1
+  firebase_remote_config: ^7.0.1
+  firebase_messaging: ^17.0.1
+  sign_in_with_apple: ^8.2.0
+  google_sign_in: ^7.2.0
+
+  # Money and growth
+  purchases_flutter: ^11.0.0
+  posthog_flutter: ^5.59.0
+  share_plus: ^13.3.1
+  in_app_review: ^2.0.12
+
+  # Platform utilities
+  path_provider: ^2.1.6
+  shared_preferences: ^2.5.6
+  url_launcher: ^6.3.3
+  permission_handler: ^13.0.2
+  package_info_plus: ^10.2.2
+  device_info_plus: ^13.3.0
+  flutter_markdown_plus: ^1.0.12
+  uuid: ^4.6.0
+  crypto: ^3.0.8
+  collection: ^1.19.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.5
+
+# opencv_dart (pulled in by face_detection_tflite) builds for the iOS
+# deployment target given here. Keep it in step with the Runner target.
+hooks:
+  user_defines:
+    dartcv4:
+      ios:
+        deployment_target: '16.0'
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/legal/
+    - assets/demo/
+    - assets/brand/
+
+  fonts:
+    - family: PlusJakartaSans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/PlusJakartaSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PlusJakartaSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PlusJakartaSans-Bold.ttf
+          weight: 700
+    - family: IBMPlexSansArabic
+      fonts:
+        - asset: assets/fonts/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/IBMPlexSansArabic-Bold.ttf
+          weight: 700
