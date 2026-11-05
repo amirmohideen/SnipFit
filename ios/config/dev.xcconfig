@@ -1,0 +1,9 @@
+// Flavor: dev. Values here override nothing in the target build settings
+// (bundle ID and display name are deliberately not set there).
+PRODUCT_BUNDLE_IDENTIFIER = com.snipfit.app.dev
+APP_DISPLAY_NAME = Snipfit Dev
+ASSOCIATED_DOMAIN = snipfit.app
+// From the GoogleService-Info.plist of this flavor's Firebase iOS app
+// (REVERSED_CLIENT_ID and CLIENT_ID). Required only for Google sign-in.
+GOOGLE_REVERSED_CLIENT_ID = com.googleusercontent.apps.REPLACE_ME_dev
+GOOGLE_IOS_CLIENT_ID = REPLACE_ME_dev.apps.googleusercontent.com

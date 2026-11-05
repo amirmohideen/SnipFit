@@ -1,0 +1,3 @@
+// Used by the plain Debug/Release/Profile configurations (no --flavor):
+// behaves like the dev flavor.
+#include "dev.xcconfig"
