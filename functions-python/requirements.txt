@@ -1,0 +1,4 @@
+firebase-functions>=0.4.2
+mediapipe>=0.10.14
+numpy>=1.26
+pillow>=10.4

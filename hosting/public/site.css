@@ -1,0 +1,13 @@
+:root { --paper:#F7F5F2; --ink:#1B1A19; --muted:#615D58; --line:#DAD5CE; --accent:#B04A33; }
+@media (prefers-color-scheme: dark) { :root { --paper:#121110; --ink:#F2EFEA; --muted:#A9A49D; --line:#3A3734; --accent:#E8846B; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif; }
+header, footer { padding:16px; max-width:760px; margin:0 auto; }
+footer { color:var(--muted); font-size:14px; border-top:1px solid var(--line); margin-top:48px; }
+a { color:var(--accent); }
+.brand { font-weight:700; font-size:20px; color:var(--ink); text-decoration:none; }
+.doc { max-width:760px; margin:0 auto; padding:0 16px 32px; }
+.doc table { border-collapse:collapse; width:100%; font-size:14px; display:block; overflow-x:auto; }
+.doc th, .doc td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+.doc blockquote { margin:16px 0; padding:12px 16px; border-left:4px solid var(--accent); background:rgba(176,74,51,.08); }
+.cta { display:inline-block; padding:14px 24px; border-radius:28px; background:#B04A33; color:#fff; text-decoration:none; font-weight:600; }

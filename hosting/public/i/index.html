@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snipfit</title>
+<link rel="stylesheet" href="/site.css">
+<script>
+  // Invite links: https://snipfit.app/i/<code>?m=<women|hijab|men>
+  // If the app is installed, iOS/Android open it directly (universal links /
+  // App Links) and this page never shows. Otherwise, send people to the
+  // store page for that mode (App Store custom product page, Play custom
+  // store listing). Fill in the IDs below before launch.
+  var APP_STORE_ID = 'REPLACE_APP_STORE_ID';
+  var PLAY_PACKAGE = 'com.snipfit.app';
+  var IOS_PAGES = { women: '', hijab: '', men: '' };     // App Store custom product page IDs (ppid)
+  var PLAY_LISTINGS = { women: '', hijab: '', men: '' }; // Google Play custom store listing IDs
+
+  var mode = new URLSearchParams(location.search).get('m') || 'women';
+  if (!(mode in IOS_PAGES)) mode = 'women';
+  var ua = navigator.userAgent || '';
+  var target = null;
+  if (/iPhone|iPad|iPod/.test(ua)) {
+    target = 'https://apps.apple.com/app/id' + APP_STORE_ID + (IOS_PAGES[mode] ? '?ppid=' + IOS_PAGES[mode] : '');
+  } else if (/Android/.test(ua)) {
+    target = 'https://play.google.com/store/apps/details?id=' + PLAY_PACKAGE + (PLAY_LISTINGS[mode] ? '&listing=' + PLAY_LISTINGS[mode] : '');
+  }
+  if (target && APP_STORE_ID !== 'REPLACE_APP_STORE_ID') location.replace(target);
+</script>
+</head>
+<body>
+<header><a href="/" class="brand">Snipfit</a></header>
+<main class="doc">
+<h1>See any fabric on you before you buy.</h1>
+<p>Your friend shared a Snipfit comparison. Get the app to make your own.</p>
+<p><a class="cta" id="store" href="/">Get Snipfit</a></p>
+</main>
+</body>
+</html>

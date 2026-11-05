@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snipfit AI Disclosure · Snipfit</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header><a href="/" class="brand">Snipfit</a></header>
+<main class="doc">
+<blockquote>
+<p><strong>DRAFT, pending legal review.</strong> This document has not
+been reviewed by a lawyer.</p>
+</blockquote>
+<h1 id="snipfit-ai-disclosure">Snipfit AI Disclosure</h1>
+<p><em>Version 2026-11-05-draft. Last updated: November 5,
+2026.</em></p>
+<p>This explains exactly what happens when you use <strong>AI
+try-on</strong>, a paid feature. The same summary is shown in the app
+before you agree.</p>
+<h2 id="what-is-sent">What is sent</h2>
+<p>Only when you start an AI try-on, after you agree on the AI consent
+screen:</p>
+<ol type="1">
+<li><strong>Your try-on photo</strong>: one photo of you (or of an adult
+who gave permission), upper or full body, fully clothed.</li>
+<li><strong>The garment photo</strong>: the item you tapped in the
+store, cut out on your phone, or a garment photo you chose.</li>
+</ol>
+<p>Nothing is sent before you tap <strong>Use it</strong> on a garment.
+The free cutout and live window never send anything.</p>
+<h2 id="to-whom">To whom</h2>
+<ul>
+<li><strong>Our servers</strong> on Google Cloud (Firebase), which check
+your account, age (18+), consent and credits.</li>
+<li><strong>Google Cloud Vertex AI</strong> (the Virtual Try-On model,
+or a Gemini image model as a fallback for some garments such as hijabs),
+which creates the preview.</li>
+<li><strong>Google Cloud Vision</strong>, which checks the photos and
+the result for adult or violent content and restricted garments
+(swimwear, underwear, lingerie).</li>
+</ul>
+<h2 id="why">Why</h2>
+<p>Only to create your try-on preview and to make sure it is safe. We do
+not use your photos for advertising, we do not sell them, and we do not
+use them to train AI models. [Owner/counsel: confirm the Google Cloud
+terms that apply to this project, including Vertex AI's commitment not
+to use customer data to train models without permission, before
+publishing this sentence.]</p>
+<h2 id="how-long-its-kept">How long it's kept</h2>
+<ul>
+<li>Your photos and the AI results are <strong>deleted from our servers
+within 24 hours</strong> (usually right after the result is
+delivered).</li>
+<li>Copies you save stay on your phone until you delete them.</li>
+<li>We keep a minimal record of each request (status, timing, which
+safety checks ran), with no images, for up to 30 days for support and
+abuse prevention.</li>
+</ul>
+<h2 id="safety">Safety</h2>
+<ul>
+<li>Instructions to the AI are fixed by us. You can't type prompts,
+upload a mask or choose what to remove.</li>
+<li>Every result must cover <strong>at least as much of the
+body</strong> as the original clothing; results that show more skin are
+blocked.</li>
+<li>Requests that are blocked or fail are <strong>refunded
+automatically</strong>.</li>
+<li>Repeated blocked requests pause AI try-on on the account.</li>
+<li>You can <strong>report</strong> any AI result from the result
+screen.</li>
+</ul>
+<h2 id="labels">Labels</h2>
+<p>Every AI image is shown with a visible
+<strong>"AI-generated"</strong> label and carries machine-readable
+provenance information (IPTC "trained algorithmic media" metadata, plus
+Google's SynthID watermark). Please keep these labels when you
+share.</p>
+<h2 id="your-choices">Your choices</h2>
+<p>You can withdraw AI consent at any time in <strong>Settings → AI
+try-on processing</strong>, which turns AI features off.</p>
+<p>Questions: <a
+href="mailto:privacy@snipfit.app"><span>privacy@snipfit.app</span></a>.</p>
+</main>
+<footer><a href="/legal/terms">Terms</a> · <a href="/legal/privacy">Privacy</a> · <a href="/legal/biometric-notice">Biometric Notice</a> · <a href="/legal/ai-disclosure">AI Disclosure</a> · <a href="/delete-account">Delete your account</a></footer>
+</body>
+</html>

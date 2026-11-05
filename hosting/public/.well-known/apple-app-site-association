@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.com.snipfit.app", "TEAMID.com.snipfit.app.dev"],
+        "components": [{ "/": "/i/*", "comment": "Invite links" }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+rules_version = '2';
+
+// AI try-on inputs and results. Inputs are written by the owner only (after
+// AI consent), never read back by clients; results are written by Cloud
+// Functions only. Everything here is deleted within 24 hours.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /tryon-inputs/{uid}/{requestId}/{file} {
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && file in ['person.jpg', 'garment.png']
+        && request.resource.size < 8 * 1024 * 1024
+        && request.resource.contentType in ['image/jpeg', 'image/png'];
+      allow read, update, delete: if false;
+    }
+    match /tryon-results/{uid}/{requestId}/{file} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
