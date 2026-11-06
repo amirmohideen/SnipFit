@@ -93,12 +93,13 @@ void main() {
   group('age gate', () {
     test('blocks under 13 for a day and never stores the birth year', () async {
       final c = await container();
-      final now = DateTime(2026, 11, 5);
-      final ok = await c.read(ageProvider.notifier).submitBirthYear(2015, locale: 'en', now: now);
+      // The block lasts 24 hours from the real clock, so use today's date.
+      final birthYear = DateTime.now().year - 10;
+      final ok = await c.read(ageProvider.notifier).submitBirthYear(birthYear, locale: 'en');
       expect(ok, isFalse);
       expect(c.read(ageProvider).blocked, isTrue);
       final prefs = await SharedPreferences.getInstance();
-      expect(prefs.getKeys().any((k) => prefs.get(k).toString().contains('2015')), isFalse);
+      expect(prefs.getKeys().any((k) => prefs.get(k).toString().contains('$birthYear')), isFalse);
     });
 
     test('uses the youngest possible age, so a 17-year-old is never an adult', () async {
