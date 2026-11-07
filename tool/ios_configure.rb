@@ -26,8 +26,14 @@ group.new_reference('Runner.entitlements') unless group.files.any? { |f| f.path 
 
 # 2. Flavor build configurations.
 flutter_group = project.main_group.find_subpath('Flutter', false)
+# The Flutter group has no folder of its own, so its file paths are relative
+# to ios/ (exactly like Flutter's own Debug.xcconfig: path = Flutter/Debug.xcconfig).
 def xcconfig_ref(flutter_group, name)
-  flutter_group.files.find { |f| f.path == name } || flutter_group.new_reference(name)
+  ref = flutter_group.files.find { |f| f.path == name || f.path == "Flutter/#{name}" } ||
+        flutter_group.new_reference("Flutter/#{name}")
+  ref.path = "Flutter/#{name}"
+  ref.name = name
+  ref
 end
 
 bases = { 'Debug' => :debug, 'Release' => :release, 'Profile' => :release }
